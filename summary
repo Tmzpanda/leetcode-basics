@@ -1,0 +1,57 @@
+Array
+# binary search
+# Last Position of Target
+# Search in Rotated Sorted Array
+
+# sort
+# merge sort    -> merge
+# quick sort    -> partition
+
+# search
+# Find K Closest in a Sorted Array    -> merge
+# Median of Two Sorted Arrays   -> merge
+# quick select   -> partition
+# Find Kth Smallest
+
+
+LinkedList
+# stream
+# Data Stream
+# LRU Cache
+
+# transform
+# Array to List
+# Merge K Lists     -> merge
+
+# heapq
+# Merge K Lists
+# Find K Closest Points
+
+
+Tree
+# traverse
+# Codec
+
+# d&q
+
+# BST
+# insert delete update
+# Iterator
+# Find Kth Smallest
+# Find Kth Closest    -> merge
+
+
+Graph
+# traverse
+
+# matrix
+# Number of Islands    - bfs
+# Knight Shortest Path    - bfs
+# Knight Probability in Chessboard    - dp
+
+# implicit graph    - dfs
+# subset
+# permutation
+
+
+
