@@ -30,12 +30,16 @@ LinkedList
 
 Tree
 # traverse
+# Tree Paths    -> recursion
 # Codec
 
-# d&q
+# divide and conquer
+# Find Minimum Subtree
+# Lowest Common Ancestor
 
 # BST
-# insert delete update
+# Sorted Array to BST    -> d&q
+# Insert Delete Update
 # Iterator
 # Find Kth Smallest
 # Find Kth Closest    -> merge
@@ -43,6 +47,7 @@ Tree
 
 Graph
 # traverse
+# Topological Sorting
 
 # matrix
 # Number of Islands    - bfs
