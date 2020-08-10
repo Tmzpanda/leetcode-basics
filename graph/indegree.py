@@ -2,9 +2,10 @@ from collections import deque
 from graph.utils import GraphNode
 from functools import reduce
 
-# topological sorting
 # DAG
-def topSort(graph):
+# topological sorting
+# indegree
+def topSort_bfs(graph):
     node_to_indegree = get_indegree(graph)
     start_nodes = [n for n in graph if node_to_indegree[n] == 0]
     queue = deque(start_nodes)
@@ -21,7 +22,6 @@ def topSort(graph):
 
     return result
 
-
 def get_indegree(graph):
     node_to_indegree = {x: 0 for x in graph}
     for node in graph:
@@ -30,8 +30,8 @@ def get_indegree(graph):
     return node_to_indegree
 
 
-
 # Sequence Reconstruction
+# convert paths to neighbors and indegree
 def sequenceReconstruction(org, seqs):
 
     # edge case handle
@@ -39,7 +39,7 @@ def sequenceReconstruction(org, seqs):
     if nodes != set(org):
         return False
 
-    # graph construction
+    # graph construction using paths
     n = len(org)
     out_edges = [[] for _ in range(n + 1)]
     in_degrees = [0 for _ in range(n + 1)]
@@ -65,6 +65,34 @@ def sequenceReconstruction(org, seqs):
 
 # Course Schedule
 # cyclic judgement
+from collections import deque
+class Solution:
+
+    def canFinish(self, numCourses, prerequisites):
+
+        # graph construction
+        out_edges = [[] for _ in range(numCourses)]
+        in_degrees = [0 for _ in range(numCourses)]
+        for t, f in prerequisites:
+            out_edges[f].append(t)
+            in_degrees[t] += 1
+
+        # topological sorting
+        queue = [node for node in range(numCourses) if in_degrees[node] == 0]
+        count = 0           # use a list if output requires the specific courses
+        while queue:
+            node = queue.pop()
+            count += 1
+            for next_node in out_edges[node]:
+                in_degrees[next_node] -= 1
+                if not in_degrees[next_node]:
+                    queue.append(next_node)
+
+        return count == numCourses      # cyclic judgement
+
+
+
+
 
 
 if __name__ == '__main__':
@@ -75,7 +103,7 @@ if __name__ == '__main__':
     node2.neighbors = [node4, node5]
     node3.neighbors = [node4, node5]
     graph = [node0, node1, node2, node3, node4, node5]
-    result = topSort(graph)
+    result = topSort_bfs(graph)
     values = []
     for node in result:
         values.append(node.label)
@@ -85,4 +113,6 @@ if __name__ == '__main__':
     orgs = [1, 2, 3, 4]
     seqs = [[1, 2, 3], [1, 2, 4], [3, 4]]
     print("Sequence Reconstruction result: %s" % sequenceReconstruction(orgs, seqs))
+
+
 

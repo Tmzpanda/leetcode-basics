@@ -49,11 +49,12 @@
 
 - Graph
 # traverse
+# Graph Paths   -> index DAG dfs
 
-# DAG
-# Topological Sorting
-# Sequence Reconstruction
-# Course Schedule
+# indegree
+# Topological Sorting   -> Node DAG bfs
+# Sequence Reconstruction   -> index
+# Course Schedule   -> index
 
 # matrix
 # Number of Islands    - bfs

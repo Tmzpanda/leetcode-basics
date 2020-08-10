@@ -19,6 +19,27 @@ def bfs_traverse(node):
     return res
 
 
+# Graph Paths From Source to Target
+# DFS
+class Solution:
+
+    def allPathsSourceTarget(self, graph):
+        paths = []
+        self.dfs(graph, 0, len(graph) - 1, [0], paths)
+
+        return paths
+
+    def dfs(self, graph, node, target, path, paths):
+        if node == target:
+            paths.append(path[:])   # deep copy
+            return
+
+        for next_node in graph[node]:
+            path.append(next_node)
+            self.dfs(graph, next_node, target, path, paths)
+            path.pop()
+
+
 if __name__ == '__main__':
 
     node1, node2, node3, node4, = GraphNode(1), GraphNode(2), GraphNode(3), GraphNode(4)
