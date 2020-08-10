@@ -37,7 +37,7 @@ class Solution:
         for next_node in graph[node]:
             path.append(next_node)
             self.dfs(graph, next_node, target, path, paths)
-            path.pop()
+            path.pop()          # backtrack
 
 
 if __name__ == '__main__':

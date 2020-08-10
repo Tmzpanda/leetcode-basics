@@ -1,5 +1,7 @@
-
 # binary search
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Specific Target 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 # iteration
 def binary_search_iteration(nums, target):
     start, end = 0, len(nums) - 1
@@ -31,25 +33,6 @@ def binary_search_recursion(nums, target):
     return dfs(nums, 0, len(nums) - 1, target)
 
 
-# Last Position of Target
-# Database
-def lastPosition(nums, target):
-    if not nums:
-        return -1
-
-    start, end = 0, len(nums) - 1
-    while start <= end:
-        mid = (start + end) // 2
-        if nums[mid] <= target:
-            start = mid + 1
-        else:
-            end = mid - 1
-    if nums[end] == target:
-        return end
-    else:
-        return -1
-
-
 # Search in Rotated Sorted Array
 def search(nums, target):
     if not nums:
@@ -73,8 +56,50 @@ def search(nums, target):
             else:
                 end = mid - 1
 
-        print(nums[start: end + 1])
     return -1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+No Specific Target 
+
+array = [1, 2, 3, 5, 6]      target = 4
+               ^  ^
+               r  l
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# Last Position of Target
+# Database
+def lastPosition(nums, target):
+    if not nums:
+        return -1
+
+    start, end = 0, len(nums) - 1
+    while start <= end:
+        mid = (start + end) // 2
+        if nums[mid] <= target:
+            start = mid + 1
+        else:
+            end = mid - 1
+    if nums[end] == target:
+        return end          # return r
+    else:
+        return -1
+
+# Search Insert Position
+def searchInsert(nums, target):
+
+    start, end = 0, len(nums) - 1
+    while start <= end:
+        mid = start + (end - start) // 2
+        if nums[mid] == target:
+            return mid
+        if target > nums[mid]:
+            start = mid + 1
+        else:
+            end = mid - 1
+    return start            # return l
+
+
+
+
 
 
 if __name__ == '__main__':
