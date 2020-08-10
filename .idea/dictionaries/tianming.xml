@@ -6,9 +6,11 @@
       <w>inorder</w>
       <w>levelorder</w>
       <w>logn</w>
+      <w>orgs</w>
       <w>postorder</w>
       <w>pred</w>
       <w>preorder</w>
+      <w>subarrays</w>
       <w>succ</w>
       <w>vals</w>
     </words>

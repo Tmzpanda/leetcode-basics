@@ -82,7 +82,7 @@ class Solution2:
 # Knight Probability in Chessboard - dp
 def knightProbability(N, K, r, c):
 
-    dp = [[0 for i in range(N)] for j in range(N)]
+    dp = [[0 for _ in range(N)] for _ in range(N)]
     dp[r][c] = 1
 
     for step in range(1, K + 1):

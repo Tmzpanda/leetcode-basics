@@ -1,4 +1,4 @@
-Array
+- Array
 # binary search
 # Last Position of Target
 # Search in Rotated Sorted Array
@@ -14,7 +14,7 @@ Array
 # Find Kth Smallest
 
 
-LinkedList
+- LinkedList
 # stream
 # Data Stream
 # LRU Cache
@@ -28,7 +28,7 @@ LinkedList
 # Find K Closest Points
 
 
-Tree
+- Tree
 # traverse
 # Tree Paths    -> recursion
 # Codec
@@ -45,9 +45,13 @@ Tree
 # Find Kth Closest    -> merge
 
 
-Graph
+- Graph
 # traverse
+
+# DAG
 # Topological Sorting
+# Sequence Reconstruction
+# Course Schedule
 
 # matrix
 # Number of Islands    - bfs
@@ -57,6 +61,11 @@ Graph
 # implicit graph    - dfs
 # subset
 # permutation
+
+
+- DP
+# Knapsack
+#
 
 
 

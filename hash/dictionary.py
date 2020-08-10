@@ -9,6 +9,7 @@ print("Frequency of 'a': %s \nFrequency of 'd': %s\n " % (dictionary['a'], dicti
 
 counter = Counter("abbcccd")
 print(type(counter), counter)
+print(counter.items(), counter.keys(), counter.values())
 
 
 default = defaultdict(int)
