@@ -35,7 +35,7 @@ def get_indegree(graph):
 def sequenceReconstruction(org, seqs):
 
     # edge case handle
-    nodes = reduce(set.union, seqs, set())
+    nodes = reduce(set.union, seqs, set())      # unique elements
     if nodes != set(org):
         return False
 
@@ -44,7 +44,7 @@ def sequenceReconstruction(org, seqs):
     out_edges = [[] for _ in range(n + 1)]
     in_degrees = [0 for _ in range(n + 1)]
     for seq in seqs:
-        for f, t in zip(seq, seq[1:]):
+        for f, t in zip(seq, seq[1:]):      # find neighbors and indegree using "zip function"
             out_edges[f].append(t)
             in_degrees[t] += 1
 
