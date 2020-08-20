@@ -30,6 +30,7 @@ class Solution:
 
         return start
 
+
     @staticmethod
     def isLeftCloser(A, left, right, target):
         if left < 0:
@@ -37,6 +38,19 @@ class Solution:
         if right > len(A) - 1:
             return True
         return target - A[left] <= A[right] - target
+
+
+def findUpperClosest2(A, target):
+    start, end = 0, len(A) - 1
+    while start + 1 < end:
+        mid = (start + end) // 2
+        if A[mid] >= target:
+            end = mid
+        else:
+            start = mid
+        print(mid)
+
+    return end
 
 
 # Median of two Sorted Arrays
@@ -114,6 +128,9 @@ if __name__ == '__main__':
 
     nums = [2, 4, 5, 3, 1, 6]
     print("Kth Smallest Element in %s: %s" % (nums, findKthSmallest(nums, 3)))
+
+    nums = [1, 2, 6, 6, 6, 6, 6, 8]
+    print(findUpperClosest2(nums, 6))
 
 
 

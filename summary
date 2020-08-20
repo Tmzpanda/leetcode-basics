@@ -1,14 +1,12 @@
 - Array
 # binary search
-# Last Position of Target   -> r
-# Search Insert Position    -> l
-# Search in Rotated Sorted Array
+# Search in Rotated Sorted Array    -> rotated
+# Last Position of Target
+# Search Insert Position
+# Mountain Sequence Maximum    -> mountain
+# Rotated Sorted Array Minimum      -> rotated
 
-
-
-#
-
-# sorta
+# sort
 # merge sort    -> merge
 # quick sort    -> partition
 
@@ -29,6 +27,10 @@
 # transform
 # Array to List
 # Merge K Lists     -> merge
+
+# search
+# Middle of Linked List
+
 
 # heapq
 # Merge K Lists

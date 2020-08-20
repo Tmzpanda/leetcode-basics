@@ -50,3 +50,16 @@ def lengthOfLIS(nums):
                 dp[i] = max(dp[i], dp[j] + 1)
 
     return max(dp)
+
+
+if __name__ == '__main__':
+
+    nums = [1, 2, 4, 1, 7, 8, 3]
+    print("Maximum Sum of Non-adjacent Elements: %s" % maxSumNoAdjacent(nums))
+
+    coins = [1, 2, 5]
+    amount = 11
+    print("Fewest Number Needed to make up Amount: %s" % coinChange(coins, amount))
+
+    nums = [10, 9, 2, 5, 3, 7, 101, 18]
+    print("Length of Longest Increasing Subsequence: %s" % lengthOfLIS(nums))

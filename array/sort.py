@@ -66,9 +66,7 @@ def quickSort(nums, start, end):
         while left <= right and nums[right] > pivot:
             right -= 1
         if left <= right:
-            temp = nums[left]
-            nums[left] = nums[right]
-            nums[right] = temp
+            nums[left], nums[right] = nums[right], nums[left]
             left += 1
             right -= 1
 
@@ -91,6 +89,7 @@ if __name__ == '__main__':
     print("Merge Sort Result: %s" % test1.sortArray(nums))
 
     nums = [7, 2, 1, 6, 8, 5, 3, 4]
+    nums = [1,2,4,4,7,3,6]
     quickSort(nums, 0, len(nums) - 1)
     print("Quick Sort Result: %s" % nums)
 

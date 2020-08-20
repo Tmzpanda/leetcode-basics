@@ -2,7 +2,7 @@ from collections import deque
 
 from graph.utils import GraphNode
 
-
+# bfs
 def bfs_traverse(node):
     queue, visited = deque([node]), {node}
     res = []
@@ -17,6 +17,43 @@ def bfs_traverse(node):
                 visited.add(neighbor)
 
     return res
+
+
+# Word Ladder I
+class Solution:
+
+    def ladderLength(self, start, end, dict):
+
+        self.dictionary = set(dict)
+        self.dictionary.add(end)
+
+        queue = deque([start])
+        level = 0
+        visited = set()
+
+        while queue:
+            level += 1
+            for _ in range(len(queue)):
+                word = queue.popleft()
+
+                if word == end:
+                    return level
+
+                for next_word in self.get_next_words(word):
+                    if next_word not in visited:
+                        queue.append(next_word)
+                        visited.add(next_word)
+        return 0
+
+    def get_next_words(self, word):
+        words = []
+        for i in range(len(word)):
+            left, right = word[:i], word[i + 1:]
+            for char in 'abcdefghijklmnopqrstuvwxyz':
+                next_word = left + char + right
+                if next_word != word and next_word in self.dictionary:
+                    words.append(next_word)
+        return words
 
 
 # Graph Paths From Source to Target

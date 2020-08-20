@@ -58,9 +58,7 @@ def subsetSum2(nums, K):
 
 
 if __name__ == '__main__':
-    # nums = [1, 2, 4, 1, 7, 8, 3]
-    # print("Maximum Sum of Non-adjacent Elements: %s" % maxSumNoAdjacent(nums))
-    #
+
     size = 3
     weights = [10, 20, 30]
     values = [60, 100, 120]
@@ -73,12 +71,7 @@ if __name__ == '__main__':
     print("Subset Sum Equals K exists: %s" % subsetSum1(nums, K))
     print("Subset Sum Equals K exists: %s" % subsetSum2(nums, K))
 
-    # coins = [1, 2, 5]
-    # amount = 11
-    # print("Fewest Number Needed to make up Amount: %s" % coinChange(coins, amount))
-    #
-    # nums = [10, 9, 2, 5, 3, 7, 101, 18]
-    # print("Length of Longest Increasing Subsequence: %s" % lengthOfLIS(nums))
+
 
 
 
@@ -91,7 +84,5 @@ if __name__ == '__main__':
 # coin change
 # LIS 具体方案？？
 
-
 # dimension reduction
-
 
