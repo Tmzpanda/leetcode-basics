@@ -80,6 +80,8 @@ class Solution2:
 
 
 # Knight Probability in Chessboard - dp
+# Time Complexity: O(k*n^2)
+# Space Complexity: O(n^2)
 def knightProbability(N, K, r, c):
 
     dp = [[0 for _ in range(N)] for _ in range(N)]
